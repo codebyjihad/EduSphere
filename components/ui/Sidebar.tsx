@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import { Button } from "./button";
 import Link from "next/link";
+import { useProvider } from "@/context/AuthProvider";
 
 type MenuItem = {
     name: string;
@@ -30,6 +31,7 @@ const menuItems: MenuItem[] = [
 const Sidebar = () => {
 
     const [user, setUser] = useState<boolean>(false)
+    const {toggleDarkMode} = useProvider()
 
 
     return (
@@ -57,7 +59,7 @@ const Sidebar = () => {
 
             <div className="p-6 border-t border-border">
                 {/* Dark Mode Button (UI only) */}
-                <button className="flex items-center mb-4 px-4 py-2  rounded-2xl bg-secondary  cursor-pointer hover:bg-secondary/70 transition-colors w-full">
+                <button onClick={toggleDarkMode} className="flex items-center mb-4 px-4 py-2  rounded-2xl bg-secondary  cursor-pointer hover:bg-secondary/70 transition-colors w-full">
                     <FaMoon className="mr-2" />
                     <span>Dark Mode</span>
                 </button>
