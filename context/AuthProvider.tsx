@@ -1,54 +1,56 @@
-'use client'
-import React, { createContext, ReactNode, useContext, useEffect, useState } from "react";
+"use client";
+import React, {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
-type Theme = 'light' | 'dark'
+type Theme = "light" | "dark";
 
-interface ContextTypes{
-    theme:Theme
-    toggleDarkMode:() => void;
+interface ContextTypes {
+  theme: Theme;
+  toggleDarkMode: () => void;
 }
 
+const AuthContext = createContext<ContextTypes | undefined>(undefined);
 
-const AuthContext = createContext< ContextTypes | undefined>(undefined)
+export const AuthProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
+  const [theme, setTheme] = useState<Theme>("dark");
 
-export const AuthProvider:React.FC<{children:ReactNode}> = ({children}) => {
-   const [theme , setTheme] = useState<Theme>('dark')
-
-
-    useEffect(() => {
-       if(theme === 'dark'){
-        document.documentElement.classList.add('dark')
-       }else{
-        document.documentElement.classList.remove('dark')
-       }
-
-    }, [theme])
-
-    const toggleDarkMode = () => {
-        setTheme((prev) => prev === 'light'? 'dark' : 'light')
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
+  }, [theme]);
 
-    const value = {
-         theme,
-        toggleDarkMode
-    }
+  const toggleDarkMode = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
 
-    return(
-        <>
-          <AuthContext.Provider value={value}>
-             {children}
-        </AuthContext.Provider>
-        </>
-    )
-}
+  const value = {
+    theme,
+    toggleDarkMode,
+  };
 
+  return (
+    <>
+      <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+    </>
+  );
+};
 
 export const useProvider = () => {
-    const context = useContext(AuthContext)
-    
-    if(!context){
-         throw new Error("Somehting went wrong !")
-    }
+  const context = useContext(AuthContext);
 
-    return context
-}
+  if (!context) {
+    throw new Error("Somehting went wrong !");
+  }
+
+  return context;
+};
