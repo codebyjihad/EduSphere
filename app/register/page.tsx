@@ -12,19 +12,18 @@ const page = () => {
       <div className="w-[90%] sm:w-[30%] md:w-[50%] lg:w-[30%] border px-8 py-10 rounded-2xl">
         <h3 className="text-2xl font-bold">Create an account</h3>
         <p className="mb-4">
-          Already have an account? <span className="font-bold cursor-pointer">Log in</span>
+          Already have an account?{" "}
+          <span className="font-bold cursor-pointer">Log in</span>
         </p>
         <form action="" className="flex flex-col">
-          <label htmlFor="" className="flex flex-col lg:flex-row lg:gap-2 w-full items-center justify-between">
+          <label
+            htmlFor=""
+            className="flex flex-col lg:flex-row lg:gap-2 w-full items-center justify-between"
+          >
             <input
               type="text"
-              placeholder="First Name"
-              className="px-1 py-2 border border-gray-300 rounded-lg mb-2 bg-gray-100 w-full lg:w-1/2"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              className="px-1 py-2 border border-gray-300 rounded-lg mb-2 bg-gray-100 w-full lg:w-1/2"
+              placeholder="Name"
+              className="px-1 py-2 border border-gray-300 rounded-lg mb-2 bg-gray-100 w-full"
             />
           </label>
           <input
@@ -35,11 +34,6 @@ const page = () => {
           <input
             type="password"
             placeholder="Password"
-            className="px-1 py-2 border border-gray-300 rounded-lg mb-2 bg-gray-100"
-          />
-          <input
-            type="password"
-            placeholder="Confirm password"
             className="px-1 py-2 border border-gray-300 rounded-lg mb-2 bg-gray-100"
           />
           <div className="flex md:flex-row gap-1 mb-4">
@@ -59,9 +53,13 @@ const page = () => {
             className="bg-blue-600 hover:bg-blue-800 transition-all duration-300 px-4 py-2 rounded-lg text-white font-bold w-full cursor-pointer"
           />
           <div>
-            <p className="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-400 before:me-6 after:flex-1 after:border-t after:border-gray-400 after:ms-6">Or register with</p>
+            <p className="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-400 before:me-6 after:flex-1 after:border-t after:border-gray-400 after:ms-6">
+              Or register with
+            </p>
             <div className="flex gap-2">
-              <button className="text-gray-800 bg-gray-100 hover:bg-gray-300 transition-all duration-300 px-4 py-2 rounded-lg font-bold w-full cursor-pointer border border-gray-300">Google</button>
+              <button className="text-gray-800 bg-gray-100 hover:bg-gray-300 transition-all duration-300 px-4 py-2 rounded-lg font-bold w-full cursor-pointer border border-gray-300">
+                Google
+              </button>
             </div>
           </div>
         </form>
