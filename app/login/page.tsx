@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const LogPages = () => {
@@ -5,9 +6,9 @@ const LogPages = () => {
     <div className="flex flex-col md:flex-row items-center justify-evenly lg:justify-around h-screen bg-background md:p-4">
       <div className="mx-auto md:mx-0 p-3 text-center md:text-left">
         <h1 className="text-3xl font-medium">
-          Welcome to <span className="font-extrabold">NextAura</span>
+          Welcome <span className="font-extrabold">Back</span>
         </h1>
-        <p className="text-gray-800">
+        <p className="text-foreground/70">
           Sign in and start your journey with NextAura social media platform
         </p>
       </div>
@@ -17,12 +18,12 @@ const LogPages = () => {
           <input
             type="email"
             placeholder="Email address"
-            className="px-1 py-2 border border-gray-300 rounded-lg mb-2 bg-gray-100"
+            className="px-1 py-2 border border-border rounded-lg mb-2 bg-background"
           />
           <input
             type="password"
             placeholder="Password"
-            className="px-1 py-2 border border-gray-300 rounded-lg mb-2 bg-gray-100"
+            className="px-1 py-2 border border-border rounded-lg mb-2 bg-background"
           />
           <div className="flex md:flex-row justify-between mb-2">
             <div className="flex gap-1">
@@ -35,20 +36,18 @@ const LogPages = () => {
               Forgot Password?
             </span>
           </div>
-          <input
-            type="submit"
-            value="Login"
-            className="bg-blue-600 hover:bg-blue-800 transition-all duration-300 px-4 py-2 rounded-lg text-white font-bold w-full cursor-pointer"
-          />
+          <Button className="cursor-pointer py-5 text-md">Log in</Button>
         </form>
         <p className="text-sm pt-2">
           Don't have an account?
-          <Link href="/register" className="font-bold cursor-pointer">Register</Link>
+          <Link href="/register" className="font-bold cursor-pointer text-primary">Register</Link>
         </p>
         <div>
-            <p className="py-3 flex items-center text-sm text-black before:flex-1 before:border-t before:border-gray-400 before:me-6 after:flex-1 after:border-t after:border-gray-400 after:ms-6">Or Login with</p>
+            <p className="py-3 flex items-center text-sm text-foreground before:flex-1 before:border-t before:border-border before:me-6 after:flex-1 after:border-t after:border-border after:ms-6">
+              Or Log In with
+            </p>
             <div className="flex gap-2">
-              <button className="text-gray-800 bg-gray-100 hover:bg-gray-300 transition-all duration-300 px-4 py-2 rounded-lg font-bold w-full cursor-pointer border border-gray-300">Google</button>
+              <Button className="w-full py-5 text-md cursor-pointer bg-foreground hover:bg-foreground text-white dark:text-black">Google</Button>
             </div>
           </div>
       </div>
