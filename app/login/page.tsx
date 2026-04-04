@@ -1,6 +1,6 @@
 const LogPages = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-around h-screen bg-background md:p-4">
+    <div className="flex flex-col md:flex-row items-center justify-evenly lg:justify-around h-screen bg-background md:p-4">
       <div className="mx-auto md:mx-0 p-3 text-center md:text-left">
         <h1 className="text-3xl font-medium">
           Welcome to <span className="font-extrabold">NextAura</span>
@@ -22,22 +22,33 @@ const LogPages = () => {
             placeholder="Password"
             className="px-1 py-2 border border-gray-300 rounded-lg mb-2 bg-gray-100"
           />
-          <div className="flex flex-col md:flex-row justify-between mb-2">
+          <div className="flex md:flex-row justify-between mb-2">
             <div className="flex gap-1">
               <input type="checkbox" name="remember" />
-              <label htmlFor="remember">Remember me</label>
+              <label htmlFor="remember" className="text-sm">
+                Remember me
+              </label>
             </div>
-            <span className="font-semibold cursor-pointer">Forgot Password?</span>
+            <span className="font-semibold cursor-pointer text-sm">
+              Forgot Password?
+            </span>
           </div>
           <input
             type="submit"
             value="Login"
-            className="bg-blue-600 px-4 py-2 rounded-lg text-white font-bold w-full cursor-pointer"
+            className="bg-blue-600 hover:bg-blue-800 transition-all duration-300 px-4 py-2 rounded-lg text-white font-bold w-full cursor-pointer"
           />
         </form>
-        <h4>
-          Don't have an account? <span className="font-bold cursor-pointer">Register</span>
-        </h4>
+        <p className="text-sm">
+          Don't have an account?
+          <span className="font-bold cursor-pointer">Register</span>
+        </p>
+        <div>
+            <p className="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-400 before:me-6 after:flex-1 after:border-t after:border-gray-400 after:ms-6">Or Login with</p>
+            <div className="flex gap-2">
+              <button className="text-gray-800 bg-gray-100 hover:bg-gray-300 transition-all duration-300 px-4 py-2 rounded-lg font-bold w-full cursor-pointer border border-gray-300">Google</button>
+            </div>
+          </div>
       </div>
     </div>
   );
