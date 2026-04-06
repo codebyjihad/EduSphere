@@ -22,9 +22,7 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-    { name: "Home", icon: <FaHome />, url: "/" },
-    { name: "Reels", icon: <FaVideo />, url: "/reels" },
-    { name: "Create", icon: <FaPlusCircle />, url: "/create" },
+    { name: "Home", icon: <FaHome />, url: "/" },,
     { name: "Notifications", icon: <FaBell />, url: "/notifications" },
      { name: "Messages", icon: <FaEnvelope />, url: "/messages" },
 ];
