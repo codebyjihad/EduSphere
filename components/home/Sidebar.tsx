@@ -11,7 +11,7 @@ import {
     FaSun,
     FaUserCircle,
 } from "react-icons/fa";
-import { Button } from "./button";
+import { Button } from "../ui/button";
 import Link from "next/link";
 import { useProvider } from "@/context/AuthProvider";
 
@@ -36,7 +36,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className="fixed top-0 left-0 h-screen w-56 bg-background text-foreground flex flex-col justify-between border border-border">
+        <div className="fixed top-0  h-screen w-56 bg-background text-foreground flex flex-col justify-between border-r border-border">
 
             {/* Logo & Menu */}
             <div>
