@@ -31,7 +31,7 @@ const menuItems: MenuItem[] = [
 
 const Sidebar = () => {
 
-    const [user, setUser] = useState<boolean>(true)
+    const [user, setUser] = useState<boolean>(false)
     const {toggleDarkMode ,theme } = useProvider()
 
 
@@ -46,14 +46,14 @@ const Sidebar = () => {
 
                 <div className="flex flex-col mt-4">
                     {menuItems.map((item, index) => (
-                        <a
+                        <Link
                             key={index}
                             href={item.url}
                             className="flex items-center px-6 py-3 hover:bg-secondary transition-colors"
                         >
                             <span className="text-xl mr-4">{item.icon}</span>
                             <span>{item.name}</span>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>
