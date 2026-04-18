@@ -1,6 +1,5 @@
-# StudyHub – Problem Solving Community Platform
-
-StudyHub is a community-based platform where users can post problems and others can help solve them. It supports multiple categories such as Programming, Mathematics, Physics, and General topics.
+# SSduShepre Problem Solving Community Platform
+ is a community-based platform where users can post problems and others can help solve them. It supports multiple categories such as Programming, Mathematics, Physics, and General topics.
 
 ## Overview
 
