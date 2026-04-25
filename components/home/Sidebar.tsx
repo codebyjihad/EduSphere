@@ -5,11 +5,10 @@ import { usePathname } from 'next/navigation'
 import { useProvider } from '@/context/AuthProvider'
 import { sideBarItems } from './sidebarItems'
 import { CiSettings } from 'react-icons/ci'
-import { FaChevronLeft } from 'react-icons/fa'
 import Link from 'next/link'
 
 const Sidebar = () => {
-  const { openMenu, handleMenuOpen } = useProvider()
+  const { openMenu, } = useProvider()
   const pathName = usePathname()
 
   return (
@@ -19,21 +18,7 @@ const Sidebar = () => {
       } transition-all duration-300 flex flex-col justify-between z-10`}
     >
       <div>
-
-        <button
-          onClick={handleMenuOpen}
-          className={`cursor-pointer p-3 rounded-lg mb-4 flex items-center bg-secondary w-full ${
-            openMenu ? 'justify-center' : 'justify-start'
-          }`}
-        >
-          <FaChevronLeft
-            className={`transition-transform duration-300 ${
-              openMenu ? 'rotate-180' : ''
-            }`}
-          />
-        </button>
-
-        <div className="flex flex-col gap-2 border-t border-border pt-2">
+        <div className="flex flex-col gap-2  pt-2">
           {sideBarItems.map((item, index) => {
             const currentPath = pathName === item.href
 

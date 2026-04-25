@@ -5,12 +5,7 @@ const LeftPanel = () => {
   return (
     <aside className="hidden md:flex flex-col w-60 h-screen border-r border-border bg-background/50 px-4 py-6 space-y-6 overflow-y-auto">
       {/* Header */}
-      <div className="flex items-center space-x-2 px-2">
-        <div className="w-8 h-8 bg-blue-600 rounded text-white flex items-center justify-center font-bold">E</div>
-        <h1 className="font-semibold text-lg">Edu Sphere</h1>
-      </div>
-
-      {/* Explore Section */}
+        {/* Explore Section */}
       <div>
         <h2 className="text-xs font-semibold text-muted-foreground uppercase mb-2 tracking-wide">Explore</h2>
         <ul className="space-y-1">
