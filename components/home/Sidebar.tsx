@@ -8,17 +8,18 @@ import { CiSettings } from 'react-icons/ci'
 import Link from 'next/link'
 
 const Sidebar = () => {
-  const { openMenu, } = useProvider()
+  const { openMenu } = useProvider()
   const pathName = usePathname()
 
   return (
     <div
-      className={`h-screen p-4 bg-background border-r border-border ${
+      className={`fixed top-[64px] left-0 h-[calc(100vh-64px)] bg-background border-r border-border flex flex-col justify-between transition-all duration-300 ${
         openMenu ? 'xl:w-50 lg:w-45 md:w-40' : 'w-20'
-      } transition-all duration-300 flex flex-col justify-between z-10`}
+      } z-30`}
     >
-      <div>
-        <div className="flex flex-col gap-2  pt-2">
+  
+      <div className="flex-1 overflow-y-auto px-4 pb-3">
+        <div className="flex flex-col gap-2 pt-2">
           {sideBarItems.map((item, index) => {
             const currentPath = pathName === item.href
 
@@ -41,17 +42,20 @@ const Sidebar = () => {
           })}
         </div>
       </div>
-      <Link
-        href="/setting"
-        className="flex items-center gap-2 p-3 rounded-lg hover:bg-muted"
-      >
-        <CiSettings />
-        {openMenu && (
-          <span className="text-sm lg:text-base text-muted-foreground hover:bg-muted">
-            Settings
-          </span>
-        )}
-      </Link>
+
+      <div className="border-t border-border">
+        <Link
+          href="/setting"
+          className="flex items-center gap-2 p-3 rounded-lg hover:bg-muted transition"
+        >
+          <CiSettings />
+          {openMenu && (
+            <span className="text-sm lg:text-base text-muted-foreground hover:text-foreground">
+              Settings
+            </span>
+          )}
+        </Link>
+      </div>
     </div>
   )
 }
