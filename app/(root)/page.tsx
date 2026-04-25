@@ -1,8 +1,9 @@
+import ProblemCard from "./ProblemCard"
 
 function Home() {
   return (
-    <div>
-       hello
+    <div> 
+        <ProblemCard/>
     </div>
   )
 }
