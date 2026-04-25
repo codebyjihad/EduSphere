@@ -15,17 +15,18 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="hidden md:flex fixed top-[64px] left-0 h-[calc(100vh-64px)] border-r border-border z-30">
         <Sidebar />
       </div>
-      <div className="hidden lg:flex fixed top-[64px] left-[80px] h-[calc(100vh-64px)] border-r border-border w-64 z-20">
+      <div className="hidden lg:flex fixed top-[64px] left-[80px] h-[calc(100vh-64px)] w-64 z-20">
         <LeftPanel />
       </div>
+
+      {/* 🔹 Fixed RightPanel (visible xl+) */}
       <div className="hidden xl:flex fixed top-[64px] right-0 h-[calc(100vh-64px)] border-l border-border w-80 z-20">
         <RightPanel />
       </div>
 
       {/* 🔹 Scrollable main feed */}
-      <main className="relative flex justify-center pt-[64px] overflow-y-auto min-h-screen">
-        {/* add left + right padding offsets for fixed panels */}
-        <div className="w-full md:ml-[80px] lg:ml-[344px] xl:mr-[320px] md:max-w-2xl lg:max-w-3xl xl:max-w-[820px] px-3 sm:px-4 py-6">
+      <main className="relative flex pt-[64px] overflow-y-auto min-h-screen">
+        <div className="w-full md:ml-[80px] lg:ml-[344px] xl:mr-[320px] px-3 sm:px-4 py-6">
           {children}
         </div>
       </main>

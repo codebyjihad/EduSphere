@@ -1,6 +1,6 @@
 import { IoMdNotifications } from "react-icons/io";
-import { FaSave } from "react-icons/fa";
 import { FaBook } from "react-icons/fa";
+import { FaBookmark, FaLightbulb } from "react-icons/fa"
 
 
 interface SideBarItem {
@@ -19,7 +19,7 @@ export const sideBarItems:SideBarItem[] = [
     {
         name:"Saved",
         href:'/saved',
-        icon:FaSave
+        icon:FaBookmark
     },
     {
         name:"Study Plan",

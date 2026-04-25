@@ -27,7 +27,7 @@ const Navbar = () => {
                     <Input placeholder='Search Problem' width={100}/>
                     <button className='bg-background border-2 px-3 py-1 border-border rounded-lg cursor-pointer'>Filter</button>
                 </div>
-                <button className='flex items-center gap-2 border border-border rounded-lg cursor-pointer px-3 py-1'>
+                <button className='flex items-center b bg-black text-white dark:bg-white dark:text-black gap-2 border border-border rounded-lg cursor-pointer px-3 py-1'>
                      <FaPlus/>
                       New Problem
                 </button> 
