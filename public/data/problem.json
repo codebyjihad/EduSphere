@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "category": "Programming",
+    "title": "How to fix useEffect infinite loop?",
+    "description": "My React app keeps re-rendering infinitely when I use useEffect.",
+    "user": { "name": "pro_ali", "role": "Developer", "image": "https://i.pravatar.cc/150?img=1" },
+    "likes": 12000,
+    "comments": 500
+  },
+  {
+    "id": 2,
+    "category": "Math",
+    "title": "How to solve quadratic equation?",
+    "description": "I don’t understand how to apply quadratic formula in real problems.",
+    "user": { "name": "math_rakib", "role": "Student", "image": "https://i.pravatar.cc/150?img=2" },
+    "likes": 8500,
+    "comments": 320
+  },
+  {
+    "id": 3,
+    "category": "Physics",
+    "title": "Why does light bend in water?",
+    "description": "I want to understand refraction in simple terms.",
+    "user": { "name": "physics_joy", "role": "Student", "image": "https://i.pravatar.cc/150?img=3" },
+    "likes": 6400,
+    "comments": 210
+  },
+  {
+    "id": 4,
+    "category": "Chemistry",
+    "title": "What is pH and how is it calculated?",
+    "description": "Confused about acidic and basic solutions.",
+    "user": { "name": "chem_siam", "role": "Student", "image": "https://i.pravatar.cc/150?img=4" },
+    "likes": 9200,
+    "comments": 410
+  },
+  {
+    "id": 5,
+    "category": "Biology",
+    "title": "How does human digestion work?",
+    "description": "I want a simple explanation of digestive system.",
+    "user": { "name": "bio_hasan", "role": "Student", "image": "https://i.pravatar.cc/150?img=5" },
+    "likes": 11000,
+    "comments": 610
+  },
+  {
+    "id": 6,
+    "category": "Programming",
+    "title": "CORS error in Express API",
+    "description": "Frontend cannot access backend API due to CORS issue.",
+    "user": { "name": "node_tanvir", "role": "Backend Dev", "image": "https://i.pravatar.cc/150?img=6" },
+    "likes": 7300,
+    "comments": 240
+  },
+  {
+    "id": 7,
+    "category": "Math",
+    "title": "What is integration in calculus?",
+    "description": "I don’t understand the concept of integration.",
+    "user": { "name": "calc_rahim", "role": "Student", "image": "https://i.pravatar.cc/150?img=7" },
+    "likes": 9800,
+    "comments": 390
+  },
+  {
+    "id": 8,
+    "category": "Physics",
+    "title": "What is Newton's third law?",
+    "description": "Action-reaction law is confusing to me.",
+    "user": { "name": "newton_kawsar", "role": "Student", "image": "https://i.pravatar.cc/150?img=8" },
+    "likes": 5400,
+    "comments": 180
+  },
+  {
+    "id": 9,
+    "category": "Chemistry",
+    "title": "What is chemical bonding?",
+    "description": "How atoms stick together in molecules?",
+    "user": { "name": "bond_rahman", "role": "Student", "image": "https://i.pravatar.cc/150?img=9" },
+    "likes": 6100,
+    "comments": 220
+  },
+  {
+    "id": 10,
+    "category": "Programming",
+    "title": "Node.js server crashing randomly",
+    "description": "Server stops without error logs.",
+    "user": { "name": "debug_joy", "role": "Engineer", "image": "https://i.pravatar.cc/150?img=10" },
+    "likes": 12000,
+    "comments": 520
+  },
+  {
+    "id": 11,
+    "category": "Math",
+    "title": "What is Pythagoras theorem?",
+    "description": "How does a² + b² = c² work?",
+    "user": { "name": "geo_nahid", "role": "Student", "image": "https://i.pravatar.cc/150?img=11" },
+    "likes": 4500,
+    "comments": 160
+  },
+  {
+    "id": 12,
+    "category": "Physics",
+    "title": "What is gravity?",
+    "description": "Why do objects fall to the ground?",
+    "user": { "name": "gravity_akash", "role": "Student", "image": "https://i.pravatar.cc/150?img=12" },
+    "likes": 8700,
+    "comments": 340
+  },
+  {
+    "id": 13,
+    "category": "Programming",
+    "title": "JWT authentication not working",
+    "description": "Token validation fails in middleware.",
+    "user": { "name": "backend_imran", "role": "Backend Dev", "image": "https://i.pravatar.cc/150?img=13" },
+    "likes": 9100,
+    "comments": 410
+  },
+  {
+    "id": 14,
+    "category": "Biology",
+    "title": "What is DNA?",
+    "description": "Basic explanation of DNA structure.",
+    "user": { "name": "dna_rifat", "role": "Student", "image": "https://i.pravatar.cc/150?img=14" },
+    "likes": 7600,
+    "comments": 300
+  },
+  {
+    "id": 15,
+    "category": "Math",
+    "title": "What is probability?",
+    "description": "I don’t understand chance and probability basics.",
+    "user": { "name": "prob_siam", "role": "Student", "image": "https://i.pravatar.cc/150?img=15" },
+    "likes": 9900,
+    "comments": 450
+  }
+]

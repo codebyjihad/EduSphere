@@ -12,6 +12,8 @@ type Theme = "light" | "dark";
 interface ContextTypes {
   theme: Theme;
   toggleDarkMode: () => void;
+  handleMenuOpen: () => void;
+  openMenu:boolean
 }
 
 const AuthContext = createContext<ContextTypes | undefined>(undefined);
@@ -20,6 +22,9 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [theme, setTheme] = useState<Theme>("dark");
+  const [isLoading , setLoading] = useState<boolean>(false)
+  const [openMenu , setOpenMenu] = useState<boolean>(false)
+
 
   useEffect(() => {
     if (theme === "dark") {
@@ -32,10 +37,17 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   const toggleDarkMode = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
+   
+  const handleMenuOpen  = () => {
+     setOpenMenu(prev => !prev)
+  }
+    
 
   const value = {
     theme,
     toggleDarkMode,
+    handleMenuOpen,
+    openMenu
   };
 
   return (
