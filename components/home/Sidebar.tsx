@@ -4,6 +4,8 @@ import { usePathname } from 'next/navigation'
 import { useProvider } from '@/context/AuthProvider'
 import { sideBarItems } from './sidebarItems'
 import { CiSettings } from "react-icons/ci";
+import { FaChevronLeft } from "react-icons/fa";
+
 
 import Link from 'next/link'
 
@@ -20,7 +22,7 @@ const Sidebar = () => {
 
             <div>
                 <button onClick={handleMenuOpen} className={`cursor-pointer p-3 rounded-lg mb-4 flex items-center bg-secondary w-full ${openMenu ? `justify-center` : `justify-start`}`}>
-
+                     <FaChevronLeft className={`transition-transform duration-300 ${openMenu ? 'rotate-180' : ''}`} />
                 </button>
 
 
@@ -46,9 +48,9 @@ const Sidebar = () => {
                     })}
                 </div>
             </div>
-            <Link href='/setting' className='flex items-center'>
+            <Link href='/setting' className='flex items-center gap-2 p-3 rounded-lg hover:bg-muted' onClick={handleMenuOpen}>
                <CiSettings />
-               {openMenu && <span className='text-sm lg:text-base'>Settings</span>}
+               {openMenu && <span className='text-sm lg:text-base text-muted-foreground hover:bg-muted'>Settings</span>}
             </Link>
         </div>
     )
